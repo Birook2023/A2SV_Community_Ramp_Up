@@ -1,0 +1,14 @@
+class Solution:
+    def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
+        temp = []
+        ans = []
+        for x,y in points:
+            E = x**2 + y**2
+            temp.append([E,[x,y]])
+            
+        temp.sort()
+        
+        for i in range(k):
+            ans.append(temp[i][1])
+        return ans
+        
